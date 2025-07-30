@@ -6,48 +6,48 @@ The project provides an AI-powered translation service built using Spring Boot, 
 
   1) API Service
 
-- Exposes a REST API (/api/translate) for translation requests.
+  - Exposes a REST API (/api/translate) for translation requests.
 
-- Sends translation requests to Kafka topic (translation-requests).
+  - Sends translation requests to Kafka topic (translation-requests).
 
-- Waits for the translated response and returns it synchronously.
+  - Waits for the translated response and returns it synchronously.
 
   2) Worker Service
 
-- Listens to translation requests from Kafka.
+  - Listens to translation requests from Kafka.
 
-- Uses Ollama API and a language model for actual translation.
+  - Uses Ollama API and a language model for actual translation.
 
-- Stores translation history in MongoDB.
+  - Stores translation history in MongoDB.
 
-- Sends the translation result back to Kafka (translation-responses).
+  - Sends the translation result back to Kafka (translation-responses).
 
 ##  Features
 Microservices Architecture (API Service + Worker Service)
 
-- Synchronous Communication via Apache Kafka
+  - Synchronous Communication via Apache Kafka
 
-- AI-Powered Translation using Ollama API (LLM)
+  - AI-Powered Translation using Ollama API (LLM)
 
-- REST API for external integration
+  - REST API for external integration
 
-- Translation Logging in MongoDB
+  - Translation Logging in MongoDB
 
-- Docker Compose for Kafka & Zookeeper setup
+  - Docker Compose for Kafka & Zookeeper setup
 
 
 
 ## Technologies Used
-- Java, Spring Boot
+  - Java, Spring Boot
 
-- Apache Kafka
+  - Apache Kafka
 
-- MongoDB
+  - MongoDB
 
-- Docker, Docker Compose
+  - Docker, Docker Compose
 
-- Ollama API (LLM for Translation)
+  - Ollama API (LLM for Translation)
 
-- REST API
+  - REST API
 
-- Maven
+  - Maven
